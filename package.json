@@ -1,0 +1,27 @@
+{
+  "name": "opencode-cscs-plugin",
+  "version": "1.0.0",
+  "description": "《NSCA-CSCS体能教练认证指南（第4版）》学习插件：注册技能 + 提供按页码OCR调取原文的工具。不包含书本身，用户需自备本地扫描件。",
+  "type": "module",
+  "main": "./index.ts",
+  "files": [
+    "index.ts",
+    "skill",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "skill",
+    "nsca",
+    "cscs",
+    "fitness",
+    "ocr"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TonyStark868/cscs-plugin"
+  }
+}
