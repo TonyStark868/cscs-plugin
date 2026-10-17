@@ -19,6 +19,12 @@ OpenCode 插件：一条配置自动注册**技能 + 工具**，让 AI 助手掌
 | 工具 | `nsca_ocr_page` | 按书页码 OCR 原文（缓存，约8秒/页） |
 | 工具 | `nsca_use_book` | 配置并持久保存用户的书 PDF 路径 |
 
+## 关于教材：没有书也能用吗？
+
+- **有书**（自己合法获得的纸质书扫描件或电子书本地副本）：配好路径后可逐页 OCR 调取原文、标页码答题、备考出题。
+- **没书**：插件照常安装。未配置路径时工具会说明情况，AI 会改用包内的**章节索引 + 要点笔记**继续辅导（不逐页调原文）。想要完整功能，请通过出版社、京东、当当等正版渠道购买纸质或电子书，用你自己拥有的副本配置路径。
+- 本插件始终**不提供书文件**，不引导盗版渠道；也请勿分享扫描件与批量 OCR 文本。
+
 ## 安装
 
 ### 方式一 · 本地路径（同机试用）
@@ -58,6 +64,17 @@ git clone https://github.com/TonyStark868/cscs-plugin.git
 ```
 
 然后同方式一引用克隆路径。
+
+## 国内网络加速
+
+大陆网络访问 `raw.githubusercontent.com` 常被重置，可用 jsDelivr 镜像直接拉取本仓库文件：
+
+```
+https://cdn.jsdelivr.net/gh/TonyStark868/cscs-plugin@main/<文件路径>
+```
+
+例如：`https://cdn.jsdelivr.net/gh/TonyStark868/cscs-plugin@main/index.ts`。
+jsDelivr 有缓存，发布新版后可用 `https://purge.jsdelivr.net/gh/TonyStark868/cscs-plugin@main/<文件路径>` 强制刷新。
 
 ## 依赖（OCR 需要）
 
