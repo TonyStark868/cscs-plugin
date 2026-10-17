@@ -92,7 +92,10 @@ export default Plugin.define({
         if (!pdf) {
           return {
             content:
-              "尚未配置教材 PDF 路径。请询问用户他们本地教材扫描件的完整路径，得到后调用 nsca_use_book 工具配置（支持 --pdf/环境变量 NSCA_CSCS_PDF/存储三种来源）。",
+              "尚未配置教材路径。请先了解用户情况再行动：\n" +
+              "1) 用户有该书扫描版 PDF → 请其提供完整路径，得到后调用 nsca_use_book 工具配置（支持 --pdf/环境变量 NSCA_CSCS_PDF/插件存储三种来源）。\n" +
+              "2) 用户没有这本书 → 如实说明本插件是\"自备教材\"工具，不含书也不提供下载；建议通过出版社或京东、当当等正版渠道购买纸质/电子书，自行扫描为 PDF 后再配置。\n" +
+              "无书时不要卡住对话：改以技能包 references/ 下的章节索引（chapter-index.md）与要点提炼（key-concepts.md）继续辅导。",
           }
         }
         if (!existsSync(pdf)) {
